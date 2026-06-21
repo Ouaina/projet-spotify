@@ -15,6 +15,15 @@ function initSpotifyApp() {
                 })
                 .catch(error => console.error("Erreur au chargement JSON :", error));
         }
+
+        get filteredTracks() {
+            if (!this.searchQuery.trim()) return this.tracks;
+            const query = this.searchQuery.toLowerCase();
+            return this.tracks.filter(track => 
+                track.name.toLowerCase().includes(query) || 
+                track.artists.some(artist => artist.name.toLowerCase().includes(query))
+            );
+        },
     };
 }
 if (window.Alpine) {
