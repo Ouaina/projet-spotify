@@ -14,7 +14,7 @@ function initSpotifyApp() {
                     this.tracks = data;
                 })
                 .catch(error => console.error("Erreur au chargement JSON :", error));
-        }
+        },
 
         get filteredTracks() {
             if (!this.searchQuery.trim()) return this.tracks;

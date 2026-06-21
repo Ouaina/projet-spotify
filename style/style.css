@@ -9,3 +9,14 @@
 [x-cloak] { 
     display: none !important; 
 }
+
+.card-album-img {
+    height: 180px;
+    object-fit: cover;
+}
+.grid-album-card {
+    transition: transform 0.2s ease-in-out;
+}
+.grid-album-card:hover {
+    transform: translateY(-4px);
+}

@@ -53,6 +53,31 @@
         </div>
       </div>
     </section>
+
+    <section class="mb-5">
+      <h2 class="h4 fw-bold mb-3 text-dark">Albums Populaires</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-6 g-3">
+        <template x-for="track in tracks.slice(0, 12)" :key="track.album.id + '-' + track.id">
+          <div class="col">
+            <div class="card h-100 shadow-sm border-0 grid-album-card">
+              <img :src="track.album.images[0]?.url" class="card-img-top card-album-img" :alt="track.album.name">
+              <div class="card-body p-2 d-flex flex-column justify-content-between">
+                <div>
+                  <h3 class="h6 card-title text-truncate mb-1" x-text="track.album.name"></h3>
+                  <p class="small text-muted mb-1 text-truncate" x-text="track.artists[0]?.name"></p>
+                  <p class="small text-muted mb-2 opacity-75" x-text="track.album.release_date"></p>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge bg-primary small" x-text="track.album.total_tracks + ' titres'"></span>
+                  <span class="badge bg-success small" x-text="'Pop. ' + track.album.popularity"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
+    </section>
+    
   </main>
 
 
