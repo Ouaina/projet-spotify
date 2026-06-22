@@ -1,11 +1,92 @@
 :root {
   --bs-primary: #6C2EB5;
   --bs-primary-rgb: 108, 46, 181;
+
   --bs-success: #FF0092;
   --bs-success-rgb: 255, 0, 146;
+
   --bs-info: #9D4EDD;
   --bs-info-rgb: 157, 78, 221;
 }
+
+
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+.btn-primary:hover {
+  background-color: #5a2594;
+  border-color: #5a2594;
+}
+
+.btn-success {
+  background-color: var(--bs-success);
+  border-color: var(--bs-success);
+}
+.btn-success:hover {
+  background-color: #d6007c;
+  border-color: #d6007c;
+}
+
+
+.bg-primary {
+  background-color: var(--bs-primary) !important;
+}
+.bg-success {
+  background-color: var(--bs-success) !important;
+}
+.bg-info {
+  background-color: var(--bs-info) !important;
+}
+
+
+.text-primary {
+  color: var(--bs-primary) !important;
+}
+
+
+.border-primary {
+  border-color: var(--bs-primary) !important;
+}
+
+
+.bg-primary-subtle {
+  background-color: #ede4f7 !important;
+}
+.text-primary.fw-normal,
+.badge.text-primary {
+  color: var(--bs-primary) !important;
+}
+
+
+a {
+  color: var(--bs-primary);
+}
+a:hover {
+  color: #5a2594;
+}
+
+[x-cloak] { 
+    display: none !important; 
+}
+
+
+.card-album-img {
+    height: 180px;
+    object-fit: cover;
+}
+
+.grid-album-card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.grid-album-card:hover {
+    transform: translateY(-4px);
+}
+
+
+
+
 [x-cloak] { 
     display: none !important; 
 }
@@ -14,9 +95,11 @@
     height: 180px;
     object-fit: cover;
 }
+
 .grid-album-card {
     transition: transform 0.2s ease-in-out;
 }
+
 .grid-album-card:hover {
     transform: translateY(-4px);
 }

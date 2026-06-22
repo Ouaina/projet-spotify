@@ -30,10 +30,26 @@ function initSpotifyApp() {
             );
         },
 
+        openDetails(track) {
+            this.selectedTrack = track;
+            this.isModalOpen = true;
+        },
+
+        closeDetails() {
+            this.isModalOpen = false;
+            this.selectedTrack = null;
+        },
+
+        formatDuration(ms) {
+            const minutes = Math.floor(ms / 60000);
+            const seconds = Math.floor((ms % 60000) / 1000);
+            return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        },
+
         initCharts() {
             if (this.tracks.length === 0) return;
 
-            // calculs artistes
+            // calculs top artistes
             const artistCounts = {};
             this.tracks.forEach(track => {
                 track.artists.forEach(artist => {
@@ -110,6 +126,7 @@ function initSpotifyApp() {
         }
     };
 }
+
 
 if (window.Alpine) {
     window.Alpine.data('spotifyApp', initSpotifyApp);
