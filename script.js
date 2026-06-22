@@ -90,7 +90,7 @@ function initSpotifyApp() {
                         datasets: [{
                             label: 'Nombre de morceaux',
                             data: artistData,
-                            backgroundColor: '#3b82f6',
+                            backgroundColor: '#af6cfb',
                             borderRadius: 4
                         }]
                     },
@@ -113,7 +113,17 @@ function initSpotifyApp() {
                         labels: genreLabels,
                         datasets: [{
                             data: genreData,
-                            backgroundColor: ['#f43f5e', '#3b82f6', '#10b981', '#f59e0b', '#6366f1', '#ec4899', '#8b5cf6', '#9ca3af']
+                            backgroundColor: [
+                                '#9a46fa', 
+                                '#fe6cb5',  
+                                '#66C7F4', 
+                                '#D63AF9',
+                                '#fc92ea', 
+                                '#6d38df', 
+                                '#e19bff',
+                                '#bcd2f9'  
+                            ],
+                            borderWidth: 1
                         }]
                     },
                     options: {

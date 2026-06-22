@@ -106,7 +106,7 @@
         <template x-for="track in tracks.slice(0, 12)" :key="track.album.id + '-' + track.id">
           <div class="col">
             <div class="card h-100 shadow-sm border-0 grid-album-card">
-              <img :src="track.album.images[0]?.url" class="card-img-top card-album-img" :alt="track.album.name">
+              <img :src="track.album.images[2]?.url" class="card-img-top card-album-img" :alt="track.album.name">
               <div class="card-body p-2 d-flex flex-column justify-content-between">
                 <div>
                   <h3 class="h6 card-title text-truncate mb-1" x-text="track.album.name"></h3>
@@ -204,8 +204,8 @@
                   </div>
 
                   <div class="text-end pt-2">
-                    <a :href="selectedTrack.external_urls?.spotify" target="_blank" class="btn btn-success btn-sm fw-bold rounded-pill px-3">
-                      Ouvrir dans Deezer
+                    <a :href="'https://www.deezer.com/search/' + encodeURIComponent(selectedTrack.name + ' ' + selectedTrack.artists[0]?.name)" target="_blank" class="btn btn-success btn-sm fw-bold rounded-pill px-3">
+                        Ouvrir dans Deezer
                     </a>
                   </div>
 
